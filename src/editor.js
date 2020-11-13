@@ -1,14 +1,14 @@
 function createHTML(options = {}) {
-    const {
-        backgroundColor = '#FFF',
-        color = '#000033',
-        placeholderColor = '#a9a9a9',
-        contentCSSText = '',
-        cssText = '',
-        pasteAsPlainText = false,
-    } = options;
-    //ERROR: HTML height not 100%;
-    return `
+  const {
+    backgroundColor = '#FFF',
+    color = '#000033',
+    placeholderColor = '#a9a9a9',
+    contentCSSText = '',
+    cssText = '',
+    pasteAsPlainText = false,
+  } = options;
+  //ERROR: HTML height not 100%;
+  return `
 <!DOCTYPE html>
 <html>
 <head>
@@ -276,7 +276,7 @@ function createHTML(options = {}) {
                     if ( action[msgData.name]){
                         var flag = msgData.name === 'result';
                         // insert image or link need current focus
-                        flag && focusCurrent();
+                        // flag && focusCurrent();
                         action[msgData.name](msgData.data);
                         flag && handler();
                     } else {
