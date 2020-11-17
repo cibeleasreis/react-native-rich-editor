@@ -36,6 +36,7 @@ export const actions = {
   setContentPlaceholder: 'SET_CONTENT_PLACEHOLDER',
   setTitleFocusHandler: 'SET_TITLE_FOCUS_HANDLER',
   setContentFocusHandler: 'SET_CONTENT_FOCUS_HANDLER',
+  setContentBlurHandler: 'SET_CONTENT_BLUR_HANDLER',
   prepareInsert: 'PREPARE_INSERT',
   restoreSelection: 'RESTORE_SELECTION',
   setCustomCSS: 'SET_CUSTOM_CSS',
