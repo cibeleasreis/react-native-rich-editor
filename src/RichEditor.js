@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {WebView} from 'react-native-webview';
+import AutoHeightWebView from 'react-native-autoheight-webview';
 import {actions, messages} from './const';
 import {
   Dimensions,
@@ -209,7 +209,7 @@ export default class RichTextEditor extends Component {
     const opacity = that.state.isInit ? 1 : 0;
     return (
       <>
-        <WebView
+        <AutoHeightWebView
           useWebKit={true}
           scrollEnabled={false}
           hideKeyboardAccessoryView={true}
@@ -217,6 +217,7 @@ export default class RichTextEditor extends Component {
           {...rest}
           ref={that.setRef}
           onMessage={that.onMessage}
+          onSizeUpdates={size => onHeightChange(size.height)}
           originWhitelist={['*']}
           dataDetectorTypes={'none'}
           domStorageEnabled={false}
