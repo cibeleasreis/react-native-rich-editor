@@ -254,8 +254,8 @@ function createHTML(options = {}) {
             addEventListener(content, 'mouseup', handleTouch);
             addEventListener(content, 'touchend', handleTouch);
             addEventListener(content, 'blur', function () {
-                postAction({type: 'CONTENT_BLURRED'});
-                postAction({type: 'SELECTION_CHANGE', data: null});
+              postAction({type: 'CONTENT_BLURRED'});
+-             postAction({type: 'SELECTION_CHANGE', data: []});
             });
             addEventListener(content, 'focus', function () {
                 postAction({type: 'CONTENT_FOCUSED'});
