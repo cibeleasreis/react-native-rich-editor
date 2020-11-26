@@ -217,7 +217,7 @@ export default class RichTextEditor extends Component {
           {...rest}
           ref={that.setRef}
           onMessage={that.onMessage}
-          onSizeUpdated={size => that.setWebHeight(size.height)}
+          onSizeUpdates={size => onHeightChange(size.height)}
           originWhitelist={['*']}
           dataDetectorTypes={'none'}
           domStorageEnabled={false}
@@ -226,7 +226,6 @@ export default class RichTextEditor extends Component {
           source={viewHTML}
           opacity={opacity}
           onLoad={that.init}
-          scalesPageToFit={true}
         />
         {Platform.OS === 'android' && (
           <TextInput ref={ref => (that._input = ref)} style={styles._input} />
