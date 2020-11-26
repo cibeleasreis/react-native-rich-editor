@@ -78,6 +78,8 @@ declare module 'react-native-pell-rich-editor' {
     'link'
   ];
 
+  export const actions;
+
   export class RichEditor extends React.Component<RichEditorProps> {
     // Public API
 
