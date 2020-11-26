@@ -175,7 +175,7 @@ export default class RichTextEditor extends Component {
     // console.log(height);
     const {onHeightChange, useContainer} = this.props;
     if (height !== this.state.height) {
-      this.setState({height});
+      useContainer && this.setState({height});
       onHeightChange && onHeightChange(height);
     }
   };
