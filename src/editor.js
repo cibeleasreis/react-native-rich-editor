@@ -260,6 +260,10 @@ function createHTML(options = {}) {
             addEventListener(content, 'focus', function () {
                 postAction({type: 'CONTENT_FOCUSED'});
             });
+            addEventListener (content, 'keydown', (event) => {
+                const keyName = event.key;
+                postAction({type: 'KEY_DOWN', data: keyName});
+            });
             ${pasteAsPlainText} && addEventListener(content, 'paste', function (e) {
                 // cancel paste
                 e.preventDefault();

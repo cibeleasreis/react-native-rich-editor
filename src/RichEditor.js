@@ -162,6 +162,10 @@ export default class RichTextEditor extends Component {
           this.props.onChange && this.props.onChange(message.data);
           break;
         }
+        case messages.KEY_DOWN: {
+          this.props.onKeyDown && this.props.onKeyDown(message.data);
+          break;
+        }
         case messages.OFFSET_HEIGHT:
           this.setWebHeight(message.data);
           break;

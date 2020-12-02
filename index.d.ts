@@ -51,6 +51,11 @@ declare module 'react-native-pell-rich-editor' {
     onChange?: (text: string) => void;
 
     /**
+     * Callback after key pressed
+     */
+    onKeyDown?: (key: string) => void;
+
+    /**
      * Callback after height change
      */
     onHeightChange?: (height: number) => void;
