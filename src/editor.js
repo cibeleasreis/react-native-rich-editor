@@ -120,7 +120,7 @@ function createHTML(options = {}) {
             link: {
                 result: function(data) {
                     data = data || {};
-                    var title = data.title;
+                    var title = data.title || window.getSelection().toString();
                     // title = title || window.prompt('Enter the link title');
                     var url = data.url || window.prompt('Enter the link URL');
                     if (url){
