@@ -17,6 +17,6 @@
   "devDependencies": {},
   "peerDependencies": {
     "react-native": ">=0.50.0",
-    "react-native-webview": "https://github.com/cibeleasreis/react-native-webview.git#8459f69049f31cbd8996b78d6605ccbb9d3010e9"
+    "react-native-webview": ">=7.5.2"
   }
 }
